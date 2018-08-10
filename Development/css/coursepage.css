@@ -1,0 +1,294 @@
+#maingrid {
+	display: grid;
+	height: 91vh;
+	grid-template-rows: 1fr 2fr 4fr 2fr 4fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: 'maintitle' 
+						 'picsect'
+						 'desc'
+						 'contact'
+						 'sched';
+}
+
+.topsign {
+	grid-area: topsign;
+	align-self: start;
+	justify-self: center;
+	font-size: 1.2em;
+}
+
+#contactsect {
+	width: 100%;
+	height: 100%;
+	grid-area: contact;
+	display: grid;
+}
+
+.contact {
+	align-self: start;
+	justify-self: center;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 10%;
+}
+
+.contact a {
+	font-size: 2em;
+	margin-bottom: 20%;
+}
+
+.contact p {
+	font-size: 1.2em;
+}
+
+.sched {
+	grid-area: sched;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 14fr 1fr;
+	grid-template-columns: 1fr 18fr 1fr;
+}
+
+#schedule {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
+embed {
+	object-fit: contain;
+	width: 100%;
+	object-position: center top;
+}
+
+#scheduletitle {
+	padding-bottom: 2%;
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+	font-size: 2em;
+}
+
+.desc {
+	grid-area: desc;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "maintitle"
+						 "results"
+						 "teachers"
+						 "followup"
+						 "personal"
+						 "locals";
+}
+
+.info {
+	display: grid;
+	grid-template-rows: 1fr 3fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: 'head'
+						 'reason';
+}
+
+.results {
+	grid-area: results;
+}
+
+.teachers {
+	grid-area: teachers;
+}
+
+.followup {
+	grid-area: followup;
+}
+
+.personal {
+	grid-area: personal;
+}
+
+.locals {
+	grid-area: locals;
+}
+
+.head {
+	grid-area: head;
+	background: var(--accent);
+	border-bottom: 1px solid white;
+	border-top: 1px solid white;
+	color: black;
+	justify-self: center;
+	align-self: center;
+	display: grid;
+	width: 100%;
+	height: 100%;
+}
+
+.head p {
+	justify-self: start;
+	align-self: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-left: 5%;
+	width: 100%;
+}
+
+.reason {
+	grid-area: reason;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 2%;
+	padding-bottom: 0%; 
+	justify-self: center;
+	align-self: center;
+	height: 100%;
+	border: none;
+	display: block;
+	width: 100%;
+}
+
+.reason p {
+	justify-self: start;
+	align-self: center;
+	font-size: 1.3em;
+}
+
+.factstitle {
+	grid-row: 1 / 2;
+	grid-column: 1 / 3;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.maintitle {
+	grid-area: maintitle;
+	width: 100%;
+	height: 100%;
+	display: grid;
+}
+
+.picsect {
+	grid-area: picsect;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 6fr;
+	grid-template-areas: 'topsign'
+						 'pic';
+}
+
+.pic {
+	grid-area: pic;
+	width: 95%;
+	justify-self: center;
+	align-self: start;
+}
+
+.pic img {
+	max-width: 100%;
+}
+
+p {
+	margin: 0px;
+}
+
+@media only screen and (min-width: 521px) {
+	.factstitle {
+		font-size: 2em;
+	}
+
+	.info {
+		grid-template-rows: 1fr;
+		grid-template-columns: 20% 80%;
+		grid-template-areas: "head reason";
+	}
+
+	.reason {
+		display: grid;
+		padding-bottom: 2%; 
+		border-top: 2px solid var(--accent);
+		border-right: 4px solid var(--accent);
+		border-bottom: 2px solid var(--accent);
+	}
+
+	.top {
+		border-top: 4px solid var(--accent);
+	}
+
+	.bottom {
+		border-bottom: 4px solid var(--accent);
+	}
+
+	.desc {
+		grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+		grid-template-areas: "title"
+							 "results"
+							 "teachers"
+							 "followup"
+							 "personal"
+							 "locals"
+							 "bottom";
+	}
+
+	.sched {
+		grid-template-rows: 1fr 18fr 1fr;
+	}	
+}
+
+@media only screen and (min-width: 769px) {
+	#maingrid {
+		grid-template-rows: 1fr 6fr 4fr;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: 'maintitle maintitle' 
+							 'desc picsect'
+							 'sched contact';
+	}
+
+	.picsect {
+		grid-template-rows: 1fr 1fr 8fr;
+		grid-template-areas: 'nun'
+							 'topsign'
+							 'pic';
+	}
+
+	.contact {
+		align-self: start;
+		padding-top: 20%;
+		padding-bottom: 0%;
+	}
+
+	.head p {
+		font-size: 1.25em;
+	}
+
+	h2 {
+		font-size: 4em;
+	}
+
+	.topsign {
+		font-size: 1.3em;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	.contact p {
+		font-size: 1.5em;
+	}
+
+	.head p {
+		font-size: 1.5em;
+	}
+
+	.desc {
+		grid-template-columns: 12fr 1fr;
+		grid-template-areas: "title side"
+							 "results side"
+							 "teachers side"
+							 "followup side"
+							 "personal side"
+							 "locals side"
+							 "bottom side";
+	}
+}

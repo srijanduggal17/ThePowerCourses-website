@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Power Courses</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand mr-0" href="#">The Power Courses</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="html/act.html">ACT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="html/sat.html">SAT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="html/gmat.html">GMAT/LSAT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="html/signup.html">Sign Up</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="coverimg"></div>
+	<div id="maingrid">
+		<h3 class="row1 center">The Power to Succeed!</h3>
+		<div class="center act" onclick="window.location.href='html/act.html'">
+			<h2>ACT</h2>
+		</div>
+		<div class="center sat" onclick="window.location.href='html/sat.html'">
+			<h2>SAT</h2>
+		</div>
+		<div class="center gmat" onclick="window.location.href='html/gmat.html'">
+			<h2>GMAT/LSAT</h2>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

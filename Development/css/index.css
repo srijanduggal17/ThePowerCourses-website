@@ -1,0 +1,74 @@
+:root {
+	--bottom: white;
+	--accent-hover: rgb(255, 122, 96);
+	--bottom-hover: rgba(0,0,0,.1);
+}
+
+#coverimg {
+	background-image: url('../assets/cover.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 70vh;
+}
+
+#maingrid {
+	display: grid;
+	height: 21vh;
+	grid-template-rows: 4em 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'a a a' 
+						 'act gmat sat';
+}
+
+.row1 {
+	grid-area: a;
+}
+
+.act {
+	grid-area: act;
+	background-color: var(--bottom);
+	width: 100%;
+	height: 100%;
+	display: grid;
+}
+
+.sat {
+	grid-area: sat;
+	background-color: var(--bottom);
+	width: 100%;
+	height: 100%;
+	display: grid;
+}
+
+.gmat {
+	grid-area: gmat;
+	background-color: var(--bottom);
+	width: 100%;
+	height: 100%;
+	display: grid;
+}
+
+.act:hover {
+	background-color: var(--bottom-hover);
+}
+
+.sat:hover {
+	background-color: var(--bottom-hover);
+}
+
+.gmat:hover {
+	background-color: var(--bottom-hover);
+}
+
+.act:hover h2 {
+	color: var(--accent-hover);
+}
+
+.sat:hover h2 {
+	color: var(--accent-hover);
+}
+
+.gmat:hover h2 {
+	color: var(--accent-hover);
+}

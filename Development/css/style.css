@@ -38,3 +38,14 @@ h2 {
 iframe {
 	border: none;
 }
+
+.notice {
+	display: grid;
+	width: 100%;
+	text-align: center;
+	padding: 1em 0;
+	background-color: lightgray;
+	color: black;
+	font-size: 1.2em;
+	align-items: center;
+}
